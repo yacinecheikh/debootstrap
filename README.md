@@ -14,7 +14,7 @@ En particulier, je n'ai pas traité:
 - les partitions logiques LVM
 - le swap (facile à faire, mais je préfère utiliser un fichiers ou une partition logique LVM)
 
-Le swap en particulier est important pour éviter que Linux ne soit obligé de fermer des applications lorsqu'il n'a plus de mémoire. On peut utiliser une partition, un fichier, ou unep partition logique LVM.
+Le swap en particulier est important pour éviter que Linux ne soit obligé de fermer des applications lorsqu'il n'a plus de mémoire. On peut utiliser une partition, un fichier, ou une partition logique LVM.
 
 Dans mes installations personnelles, j'utilise:
 - un volume chiffré qui remplit le disque entier
@@ -433,5 +433,5 @@ tasksel --task-packages web-server
 ```
 
 Cette dernière option n'est pas très utile car toutes les tâches tasksel sont associées à un méta-paquet. Par exemple, `tasksel --task-packages laptop` renvoie `task-laptop`.
-En fouillant récursivement les dépendances avec `apt-cache depends task-laptop`, on peut quand même voir quels types de paquets seront installés
+Mais en fouillant récursivement les dépendances avec `apt-cache depends task-laptop`, on peut quand même voir quels types de paquets seront installés.
 
